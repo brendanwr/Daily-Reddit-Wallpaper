@@ -1,4 +1,4 @@
-# Daily Reddit Wallpaper (on startup)
+# Last.fm Top Artist Wallpaper (on startup)
 This script changes your wallpaper to the top artist from your last.fm library 
 
 
