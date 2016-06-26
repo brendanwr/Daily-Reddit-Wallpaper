@@ -1,8 +1,6 @@
 # Daily Reddit Wallpaper (on startup)
-This script changes your wallpaper to most upvoted image of the day on [/r/wallpapers](https://www.reddit.com/r/wallpapers/) or from any other subreddit.
+This script changes your wallpaper to the top artist from your last.fm library 
 
-
-**Run it on startup for new wallpaper on every session.**
 
 *Supported: Linux (gnome, kde, mate, lxde), Windows and OS X*
 
@@ -17,7 +15,7 @@ If you don't have ```pip ``` for Python:
 sudo apt-get install python-pip
 ```
 
-You will need modules ```requests``` and ```praw``` installed, which are in requirements.txt:
+You will need the module ```requests```  installed, which are in requirements.txt:
 
 ```
 pip install -r requirements.txt
@@ -31,24 +29,17 @@ The rest is the same.
 Using script
 =======
 
-Simply run:
+Simply run (a username is required):
 ```
-python /home/silvio/Scripts/change_wallpaper_reddit.py 
-```
-
-If you wanna use other subreddit, include argument with the subreddit name:
-```
-python /home/silvio/Scripts/change_wallpaper_reddit.py --subreddit earthporn
+python /home/silvio/Scripts/change_wallpaper_lastfm.py --user USERNAME
 ```
 
-If you don't want to change your wallpaper daily, you can use newest, hourly, weekly, monthly or yearly wallpaper too by adding one of the following arguments: ```new```, ```hour```, ```week```, ```month```, ```year``` to the script.
-
-Example:
+If you wanna use other time periods, include one of the following arguments: overall | 7day | 1month | 3month | 6month | 12month. Defaults to overall
 ```
-python /home/silvio/Scripts/change_wallpaper_reddit.py --time week 
+python /home/silvio/Scripts/change_wallpaper_lastfm.py --period 6month
 ```
-
-NSFW images are disabled by default, to enable them add ```--nsfw```.
+python /home/silvio/Scripts/change_wallpaper_lastfm.py --time week 
+```
 
 On OS X, you can specify display number with option ```--display```. Use 0 for all display (default), 1 for main display and so on.
 
@@ -66,7 +57,7 @@ Click on Add.
 
 ![Add new startup command](http://i.imgur.com/uFqQ8ky.png)
 
-Note: you can use ```--subreddit``` and ```--time``` arguments here aswell.
+Note: you can use ```--period``` arguments here aswell.
 
 
 Windows
@@ -86,13 +77,13 @@ Follow the procedure.
 In ```Add arguments``` field type the location of the script. Example
 
 ```
-"D:\change_wallpaper_reddit.py" 
+"D:\change_wallpaper_lastfm.py" 
 ```
 
 or 
 
 ```
-"D:\change_wallpaper_reddit.py" --subreddit art --time week 
+"D:\change_wallpaper_lastfm.py" --period 7day 
 ```
 
 Running every minute or hour
