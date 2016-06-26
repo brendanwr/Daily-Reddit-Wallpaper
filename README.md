@@ -39,7 +39,7 @@ If you wanna use other time periods, include one of the following arguments: ove
 python /home/silvio/Scripts/change_wallpaper_lastfm.py --period 6month
 ```
 python /home/silvio/Scripts/change_wallpaper_lastfm.py --time week 
-```
+
 
 On OS X, you can specify display number with option ```--display```. Use 0 for all display (default), 1 for main display and so on.
 
